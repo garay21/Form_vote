@@ -1,6 +1,6 @@
 <?php
 
-include('./../model/candidato.php');
+include('./../model/candidatoModel.php');
 
 $ctn = new CandidatoModel();
 

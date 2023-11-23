@@ -19,20 +19,23 @@ function main(){
     comunaChange()    
 }
 
+// funcion para verficar siel rut ingresado es chileno
 function rutAuth(){
     const rut = document.querySelector('#rut')
     const msg = document.querySelector('#msg')
     rut.addEventListener('change', ()=>{
         const value = rut.value
         if(validarRut(value)){
-            msg.innerHTML = '<input class="danger" placeholder="R.U.T ingresado es valido !!" readonly>'
+            msg.innerHTML = '<input class="succes" name="validate" value="1" placeholder="R.U.T ingresado es valido !!" readonly>'
         }
         else{
-            msg.innerHTML = '<input class="succes" placeholder="R.U.T ingresado es invalido !!" readonly>'
+            msg.innerHTML = '<input class="danger" name="validate" value="0" placeholder="R.U.T ingresado es invalido !!" readonly>'
         }
     })
 }
 
+//funcion para cambiar de forma dinamica las comunas segun que region 
+//se ha elegido 
 function comunaChange(){
     const reg = document.querySelector('#region')
     const com = document.querySelector('#comuna')  

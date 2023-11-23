@@ -6,4 +6,5 @@
 
 # iniciar aplicacion 
 
-<p> para iniciar la aplicaion debemos hacerlo con un servidor como live server</p>
+<p> Para poder instalas o ver la aplicacion debemos de depositarla en algun servidor o instalas XAMP y algun
+otro igual y agregar el proyecto</p>

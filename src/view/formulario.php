@@ -1,6 +1,7 @@
 <?php
     include('./../controller/regionComunaController.php');
     include('./../controller/candidatoController.php');
+    session_start();
 ?>
 <form action="./src/controller/formController.php?action=store" method="post">
     <label >Nombre y apellido</label>
@@ -26,7 +27,7 @@
     </select>
     <label >Candidato</label>
     <select name="candidato" id="candidato" required>
-        <option value="0">Selecione un candidato</option>
+        <option value="">Selecione un candidato</option>
         <?php
             foreach ($candidatos as $item) {         
                 echo '<option value="'.$item['id_candidato'].'">'.$item['nombre'].'</option>';
@@ -36,16 +37,23 @@
     <label>Como se entero de nosotros</label>
     <div class="check-content">
         <label >Web</label>
-            <input type="checkbox" name="sobre" onclick="onlyOne(this)">
+            <input type="checkbox" name="sobre[]" value="web" >
         <label >TV</label>
-            <input type="checkbox" name="sobre" onclick="onlyOne(this)">
+            <input type="checkbox" name="sobre[]" value="TV" >
         <label >Redes sociales</label>
-            <input type="checkbox" name="sobre" onclick="onlyOne(this)">
+            <input type="checkbox" name="sobre[]" value="redes sociales" >
         <label >Amigos</label>
-            <input type="checkbox" name="sobre" onclick="onlyOne(this)">
+            <input type="checkbox" name="sobre[]" value="amigos" >
     </div>
     <button type="submit">Votar</button>
     <div class="msg" id="msg"></div>
+    <div class="validate" id="validate">
+        <?php
+            if (isset($_SESSION['msg'])) {
+                echo '<p>'.$_SESSION['msg'].'</p>';
+            }
+        ?>
+    </div>
 </form>
 
 

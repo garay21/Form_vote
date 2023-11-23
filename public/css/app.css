@@ -3,11 +3,22 @@ form{
     flex-direction: column;
     gap: 5px;
 }
-
-.danger{
-    color: red;
+.msg{
+    display: flex;
+    justify-content: center;
+}
+.msg input{   
+    width: 90%;
+    color: black;
+    font-size: 1rem;
 }
 
 .msg .succes{
-    color: green;
+   border-color: green;
 }
+
+.msg .danger{
+    border-color: red;
+}
+
+

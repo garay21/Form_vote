@@ -18,16 +18,5 @@ class CandidatoModel{
         }          
         return $datos;
     }
-
-    public function showComune($id){           
-
-        $result = $this->db->query("select * from commune where fk_region_id = $id;");
-        $datos = [];
-
-        while ($row = $result->fetch_assoc()) {
-            $datos[] = $row;
-        }  
-        return $datos;
-    }
 }
 ?>
