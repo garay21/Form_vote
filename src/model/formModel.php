@@ -1,7 +1,8 @@
 <?php
 include_once('./../config/config.php');
+include_once('./../config/constants.php');
 
-$conn = new BDConect();
+$conn = new BDConect($serverhost,$username,$password,$database);
 
 class Formmodel{
     public function addVoter($request){

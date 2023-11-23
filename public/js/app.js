@@ -4,14 +4,18 @@ const App = document.querySelector('#app')
 // pedir los datos del formulario y unirlos a la app
 
 document.addEventListener("DOMContentLoaded", function(){
-    fetch('./../../src/view/formulario.php')
+    fetch('./src/view/formulario.php')
     .then(Response => Response.text())
     .then(element => {
         App.innerHTML = element
     }).finally(()=>{
-        
+        main()
     })
 });
+
+function main(){
+    
+}
 
 
 

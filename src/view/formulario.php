@@ -1,9 +1,12 @@
-<form action="./../controllers/formController.php" method="post">
-    <h2>Formulario de Vatoción</h2>
+<?php
+    
+?>
+
+<form action="./src/controller/formController.php?action=store" method="post">
     <label >Nombre y apellido</label>
     <input type="text" name="name-lastname" placeholder="Nombre y apellido del votante" required>
     <label >Alias</label> 
-    <input type="text" name="alias" placeholder="Alias del votante" required>
+    <input type="text" name="alias" placeholder="Alias del votante" minlength="5" required>
     <label >Rut</label>
     <input type="text" name="rut" id="rut-vot" placeholder="Rut del votante" required>
     <label >e-mail</label>
@@ -32,7 +35,7 @@
             <input type="checkbox" name="sobre" onclick="onlyOne(this)">
     </div>
     <button type="submit">Votar</button>
-    <div class="msg"></div>
+    <div class="msg" id="msg"></div>
 </form>
 
 
