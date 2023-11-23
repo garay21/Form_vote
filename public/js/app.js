@@ -26,10 +26,10 @@ function rutAuth(){
     rut.addEventListener('change', ()=>{
         const value = rut.value
         if(validarRut(value)){
-            msg.innerHTML = '<input class="succes" name="validate" value="1" placeholder="R.U.T ingresado es valido !!" readonly>'
+            msg.innerHTML = '<input type="hidden" class="succes" name="validate" value="1" placeholder="R.U.T ingresado es valido !!" disable>'
         }
         else{
-            msg.innerHTML = '<input class="danger" name="validate" value="0" placeholder="R.U.T ingresado es invalido !!" readonly>'
+            msg.innerHTML = '<input type="hidden" class="danger" name="validate" value="0" placeholder="R.U.T ingresado es invalido !!" disable>'
         }
     })
 }
