@@ -6,8 +6,10 @@
 
 # iniciar aplicacion 
 
-<p> Para poder instalas o ver la aplicacion debemos de depositarla en algun servidor o instalas XAMP y algun
-otro igual y agregar el proyecto</p>
+<p> Para poder instalar o ver la aplicacion debemos de depositarla en algun servidor web, XAMP o algun
+otro igual, agregar el proyecto a la raiz y abrirlo por la url</p>
 
 ## Formulario Voto
+
+<p></p>
 

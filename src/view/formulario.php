@@ -6,9 +6,9 @@
 <form action="./src/controller/formController.php?action=store" method="post">
     <label >Nombre y apellido</label>
     <input type="text" name="name-lastname" placeholder="Nombre y apellido del votante" required>
-    <label >Alias</label> 
+    <label >Alias (ejemplo user123)</label> 
     <input type="text" name="alias" placeholder="Alias del votante" minlength="5" required>
-    <label >Rut</label>
+    <label >Rut (formato sin punto y guion : 11222333-4)</label>
     <input type="text" name="rut" id="rut" placeholder="Rut del votante" required>
     <label >e-mail</label>
     <input type="text" name="e-mail" placeholder="e-mail del votante" required>
