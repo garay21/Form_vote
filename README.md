@@ -22,7 +22,7 @@ otro igual, agregar el proyecto a la raiz y abrirlo por la url.</p>
 </ul>
 <p>según las validaciones guarda el voto y el votante en la base de datos, de ya existir el rut del votante no se agrega y avisa que ya existe.</p>
 
-## Conecion a la base de datos
+## Conección a la base de datos
 
 <p> para conectar a la base de datos debemos de dirijirnos a la siguiente ruta /src/config/config.php
 en este archivo tenemos definidos las variables de conección(trabajamod con mysqli), donde podemos cambiarlas según vuestras credenciales.
