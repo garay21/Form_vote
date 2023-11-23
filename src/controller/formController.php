@@ -31,15 +31,15 @@ switch($action){
         $cm = $request['comuna'];
         $cndt =  implode(' - ',$request['sobre']);
 
-        //Validacion que el nombre y el apellido con esten en blanco
-        if(mb_strlen($nmlt) < 5){
+        //Validacion que el nombre y el apellido que no esten en blanco
+        if(mb_strlen($nmlt) == 0){
             $message = $message.'nombre en blanco ingrese uno valido, ';     
             $result = false;        
         }
 
         //validacion que el alias contenga almenos 5 caracteres y numero o letras
-        if(!mb_strlen($alis) > 5 || !preg_match('/^[a-zA-Z0-9]+$/', $alis)){
-            $message = $message.'el alias debe de ser alñ menos mas de 5 caracteres , ';   
+        if(mb_strlen($alis) < 5 || !preg_match('/^[a-zA-Z0-9]+$/', $alis)){
+            $message = $message.'el alias debe de ser al menos mas de 5 caracteres, letras y numeros, ';   
             $result = false;            
         }
         
@@ -49,17 +49,15 @@ switch($action){
         if($result){
             echo '<h1>succes</h1>';
             $req = $frm->store($request);   
-            echo $req;
             if ($req) {
                 $message = $message.'Agregado correctamente';          
             }        
             else {
                 $message = $message.'voto no agregado rut ya existente !!';        
             }                
-        }     
-        echo $message;
+        }  
         $_SESSION['msg'] = $message;
-        //header("Location: /form-vot/");
+        header("Location: /form-vot/");
        
         break;
 }

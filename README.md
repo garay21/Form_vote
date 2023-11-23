@@ -8,3 +8,6 @@
 
 <p> Para poder instalas o ver la aplicacion debemos de depositarla en algun servidor o instalas XAMP y algun
 otro igual y agregar el proyecto</p>
+
+## Formulario Voto
+
