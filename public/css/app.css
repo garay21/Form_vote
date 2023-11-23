@@ -3,3 +3,11 @@ form{
     flex-direction: column;
     gap: 5px;
 }
+
+.danger{
+    color: red;
+}
+
+.msg .succes{
+    color: green;
+}

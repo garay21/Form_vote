@@ -1,5 +1,5 @@
 <?php
-    
+
 ?>
 
 <form action="./src/controller/formController.php?action=store" method="post">
@@ -8,7 +8,7 @@
     <label >Alias</label> 
     <input type="text" name="alias" placeholder="Alias del votante" minlength="5" required>
     <label >Rut</label>
-    <input type="text" name="rut" id="rut-vot" placeholder="Rut del votante" required>
+    <input type="text" name="rut" id="rut" placeholder="Rut del votante" required>
     <label >e-mail</label>
     <input type="text" name="e-mail" placeholder="e-mail del votante" required>
     <label >Region</label>

@@ -14,7 +14,18 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 
 function main(){
-    
+    const rut = document.querySelector('#rut')
+    const msg = document.querySelector('#msg')
+
+    rut.addEventListener('change', ()=>{
+        const value = rut.value
+        if(validarRut(value)){
+            msg.innerHTML = '<p class="danger"> R.U.T ingresado es valido !!<p>'
+        }
+        else{
+            msg.innerHTML = '<p class="succes"> R.U.T ingresado invalido !!<p>'
+        }
+    })
 }
 
 
