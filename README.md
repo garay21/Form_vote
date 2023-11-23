@@ -13,3 +13,8 @@ otro igual, agregar el proyecto a la raiz y abrirlo por la url</p>
 
 <p></p>
 
+## Conecion a la base de datos
+
+<p> para conectar a la base de datos debemos de dirijirnos a la siguiente ruta /src/config/config.php
+en este aarchivo tenemos definidos las variables de conección, donde podemos cambiarlas según vuestras credenciales.</p>
+
