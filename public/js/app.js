@@ -11,19 +11,23 @@ document.addEventListener("DOMContentLoaded", function(){
     }).finally(()=>{
         main()
     })
+    .catch(error => console.log(error))
 });
 
 function main(){
+    
+
+
     const rut = document.querySelector('#rut')
     const msg = document.querySelector('#msg')
 
     rut.addEventListener('change', ()=>{
         const value = rut.value
         if(validarRut(value)){
-            msg.innerHTML = '<p class="danger"> R.U.T ingresado es valido !!<p>'
+            msg.innerHTML = '<input class="danger" placeholder="R.U.T ingresado es valido !!" readonly>'
         }
         else{
-            msg.innerHTML = '<p class="succes"> R.U.T ingresado invalido !!<p>'
+            msg.innerHTML = '<input class="succes" placeholder="R.U.T ingresado es invalido !!" readonly>'
         }
     })
 }

@@ -1,8 +1,8 @@
 <?php
 
-include_once('./../model/formModel.php');
+include_once('./../model/regionComunaModel.php');
 
-$frommodel = new FormModel();
+$rcm = new Region_model();
 
 if(isset($_GET['action'])){
     $action = $_GET['action'];
@@ -12,6 +12,9 @@ else {
 }
 
 switch($action){
+    case 'index':
+        $regiones = $rcm->show();
+        break;
     case 'store':
         header("Location: /form-vot/");
         break;

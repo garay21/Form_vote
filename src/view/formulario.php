@@ -1,6 +1,8 @@
 <?php
-
+    include('./../controller/regionComunaController.php')
 ?>
+
+
 
 <form action="./src/controller/formController.php?action=store" method="post">
     <label >Nombre y apellido</label>
@@ -14,6 +16,11 @@
     <label >Region</label>
     <select name="region" id="" required>
         <option value="0">Seleccione una región</option>
+        <?php
+            foreach ($regiones as $item) {         
+                echo '<option value="'.$item['region_id'].'">'.$item['region_name'].'</option>';
+            }
+        ?>
     </select>  
     <label>Comuna</label>
     <select name="comuna" id="" required>
