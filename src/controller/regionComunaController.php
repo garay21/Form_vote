@@ -18,6 +18,11 @@ switch($action){
     case 'store':
         header("Location: /form-vot/");
         break;
+    case 'getComunas':
+        header('Content-Type: application/json');
+        $id = $_GET['id'];
+        echo json_encode($rcm->showComune($id));
+        break;
 }
 
 

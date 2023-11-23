@@ -1,9 +1,6 @@
 <?php
     include('./../controller/regionComunaController.php')
 ?>
-
-
-
 <form action="./src/controller/formController.php?action=store" method="post">
     <label >Nombre y apellido</label>
     <input type="text" name="name-lastname" placeholder="Nombre y apellido del votante" required>
@@ -14,8 +11,8 @@
     <label >e-mail</label>
     <input type="text" name="e-mail" placeholder="e-mail del votante" required>
     <label >Region</label>
-    <select name="region" id="" required>
-        <option value="0">Seleccione una región</option>
+    <select name="region" id="region" required>
+        <option value="">Seleccione una región</option>
         <?php
             foreach ($regiones as $item) {         
                 echo '<option value="'.$item['region_id'].'">'.$item['region_name'].'</option>';
@@ -23,8 +20,8 @@
         ?>
     </select>  
     <label>Comuna</label>
-    <select name="comuna" id="" required>
-        <option value="0">Selecione una comuna</option>
+    <select name="comuna" id="comuna" required>
+        <option value="">Selecione una comuna</option>
     </select>
     <label >Candidato</label>
     <select name="candidato" id="candidato" required>
