@@ -2,7 +2,7 @@
 
 include_once('./../model/regionComunaModel.php');
 
-$rcm = new Region_model();
+$rcm = new RegionModel();
 
 if(isset($_GET['action'])){
     $action = $_GET['action'];

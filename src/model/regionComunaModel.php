@@ -1,7 +1,7 @@
 <?php
 include_once('./../config/config.php');
 
-class Region_model{
+class RegionModel{
     private $db;
 
     public function __construct(){

@@ -1,5 +1,6 @@
 <?php
-    include('./../controller/regionComunaController.php')
+    include('./../controller/regionComunaController.php');
+    include('./../controller/candidatoController.php');
 ?>
 <form action="./src/controller/formController.php?action=store" method="post">
     <label >Nombre y apellido</label>
@@ -26,6 +27,11 @@
     <label >Candidato</label>
     <select name="candidato" id="candidato" required>
         <option value="0">Selecione un candidato</option>
+        <?php
+            foreach ($candidatos as $item) {         
+                echo '<option value="'.$item['id_candidato'].'">'.$item['nombre'].'</option>';
+            }
+        ?>
     </select>
     <label>Como se entero de nosotros</label>
     <div class="check-content">
