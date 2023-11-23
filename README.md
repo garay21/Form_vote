@@ -25,7 +25,7 @@ otro igual, agregar el proyecto a la raiz y abrirlo por la url.</p>
 ## Conección a la base de datos
 
 <p> para conectar a la base de datos debemos de dirijirnos a la siguiente ruta /src/config/config.php
-en este archivo tenemos definidos las variables de conección(trabajamod con mysqli), donde podemos cambiarlas según vuestras credenciales.
+en este archivo tenemos definidos las variables de conección(trabajando con mysqli), donde podemos cambiarlas según vuestras credenciales.
 </p>
 
 ## lenguajes
